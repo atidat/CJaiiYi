@@ -698,8 +698,8 @@ I (D:\CPT\Product\software\FWLIB\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (D:\CPT\Product\software\FWLIB\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (D:\CPT\Product\software\FWLIB\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (D:\CPT\Product\software\FWLIB\inc\misc.h)(0x4D783BB4)
-F (.\main.c)(0x58F5B0D7)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+F (.\main.c)(0x59004826)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -739,9 +739,10 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (.\stm32f10x_it.c)(0x590039FA)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\stm32f10x_it.o --omf_browse ..\output\stm32f10x_it.crf --depend ..\output\stm32f10x_it.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -781,9 +782,10 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (.\usart.c)(0x590037CC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\usart.o --omf_browse ..\output\usart.crf --depend ..\output\usart.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -823,9 +825,10 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (.\spi.c)(0x590037CC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\spi.o --omf_browse ..\output\spi.crf --depend ..\output\spi.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -865,9 +868,10 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (..\Ads1256\ads.c)(0x5900368F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\ads.o --omf_browse ..\output\ads.crf --depend ..\output\ads.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -907,9 +911,10 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (..\Ads1256\app_ads.c)(0x58FDB8B0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\app_ads.o --omf_browse ..\output\app_ads.crf --depend ..\output\app_ads.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -949,9 +954,10 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (..\SD\sdcard.c)(0x59003ACC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\sdcard.o --omf_browse ..\output\sdcard.crf --depend ..\output\sdcard.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -991,11 +997,12 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (..\public\public.c)(0x5900369C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\public.o --omf_browse ..\output\public.crf --depend ..\output\public.d)
 I (D:\CPT\Product\software\Project\public\public.h)(0x58F47B58)
-F (..\FatFs\diskio.c)(0x59003F55)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\diskio.o --omf_browse ..\output\diskio.crf --depend ..\output\diskio.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+F (..\FatFs\diskio.c)(0x590045BE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\diskio.o --omf_browse ..\output\diskio.crf --depend ..\output\diskio.d)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -1035,14 +1042,15 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
 F (..\FatFs\ff.c)(0x4E64E464)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\ff.o --omf_browse ..\output\ff.crf --depend ..\output\ff.d)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
-F (..\FatFs\ffoperate.c)(0x590037CC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\ffoperate.o --omf_browse ..\output\ffoperate.crf --depend ..\output\ffoperate.d)
-I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
+F (..\FatFs\ffoperate.c)(0x590049F0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\ffoperate.o --omf_browse ..\output\ffoperate.crf --depend ..\output\ffoperate.d)
+I (D:\CPT\Product\software\Project\public\headers.h)(0x5900464B)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
 I (E:\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -1082,4 +1090,5 @@ I (D:\CPT\Product\software\Project\SD\sdcard.h)(0x59003AE6)
 I (D:\CPT\Product\software\Project\FatFs\diskio.h)(0x54255D2A)
 I (D:\CPT\Product\software\Project\FatFs\integer.h)(0x4BD31212)
 I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
-I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
+I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x590049C1)
+I (D:\CPT\Product\software\Project\FatFs\ffoperate.h)(0x55F0EEDE)
