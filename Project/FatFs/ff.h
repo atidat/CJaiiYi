@@ -111,24 +111,24 @@ typedef struct {
 /* File object structure (FIL) */
 
 typedef struct {
-	FATFS*	fs;				/* Pointer to the owner file system object */
-	WORD	id;				/* Owner file system mount ID */
-	BYTE	flag;			/* File status flags */
+	FATFS*	fs;					/* Pointer to the owner file system object */
+	WORD	id;						/* Owner file system mount ID */
+	BYTE	flag;					/* File status flags */
 	BYTE	pad1;
-	DWORD	fptr;			/* File read/write pointer (0 on file open) */
-	DWORD	fsize;			/* File size */
-	DWORD	sclust;			/* File start cluster (0 when fsize==0) */
-	DWORD	clust;			/* Current cluster */
-	DWORD	dsect;			/* Current data sector */
+	DWORD	fptr;					/* File read/write pointer (0 on file open) */
+	DWORD	fsize;				/* File size */
+	DWORD	sclust;				/* File start cluster (0 when fsize==0) */
+	DWORD	clust;				/* Current cluster */
+	DWORD	dsect;				/* Current data sector */
 #if !_FS_READONLY
-	DWORD	dir_sect;		/* Sector containing the directory entry */
-	BYTE*	dir_ptr;		/* Ponter to the directory entry in the window */
+	DWORD	dir_sect;			/* Sector containing the directory entry */
+	BYTE*	dir_ptr;			/* Ponter to the directory entry in the window */
 #endif
 #if _USE_FASTSEEK
 	DWORD*	cltbl;			/* Pointer to the cluster link map table (null on file open) */
-#endif
+#endif		
 #if _FS_SHARE
-	UINT	lockid;			/* File lock ID (index of file semaphore table) */
+	UINT	lockid;				/* File lock ID (index of file semaphore table) */
 #endif
 #if !_FS_TINY
 	BYTE	buf[_MAX_SS];	/* File data read/write buffer */

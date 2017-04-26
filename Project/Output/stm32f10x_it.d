@@ -41,3 +41,4 @@
 ..\output\stm32f10x_it.o: ..\FatFs\integer.h
 ..\output\stm32f10x_it.o: ..\FatFs\ffconf.h
 ..\output\stm32f10x_it.o: ..\FatFs\ff.h
+..\output\stm32f10x_it.o: ..\FatFs\ffoperate.h

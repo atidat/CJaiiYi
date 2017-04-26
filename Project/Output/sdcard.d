@@ -41,3 +41,4 @@
 ..\output\sdcard.o: ..\FatFs\integer.h
 ..\output\sdcard.o: ..\FatFs\ffconf.h
 ..\output\sdcard.o: ..\FatFs\ff.h
+..\output\sdcard.o: ..\FatFs\ffoperate.h

@@ -11,11 +11,11 @@ file function		:definition of file operation
 */
 
 FRESULT res;      
-UINT    bw,br;        
+UINT    bw,br;        //文件读/写计数
 
 FATFS fs,*pFs ;       // Work area (file system object) for logical drive
 
-FIL   fsrc;            // file structure
+FIL   fsrc;           // file structure
 
 unsigned int fileSize=0;  
 unsigned int usedCapacity ;
@@ -33,8 +33,8 @@ warn				:the byteCount should be valid length = strlen(pBuff)+1
 *********************************************************************/
 unsigned char fileHeader[70] = "##Ye-Mo-Da Ho:Mi:Se,xMagValue,yMagValue,zMagValue,aMagValue\r\n";
 unsigned char sdWriteDataInFile(unsigned char *pBuffer,
-												unsigned int byteCount,
-												const char *path)
+																unsigned int byteCount,
+																const char *path)
 {
 			
 			if(NULL==pBuffer || byteCount==0)

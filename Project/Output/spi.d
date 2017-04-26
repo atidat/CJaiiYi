@@ -41,3 +41,4 @@
 ..\output\spi.o: ..\FatFs\integer.h
 ..\output\spi.o: ..\FatFs\ffconf.h
 ..\output\spi.o: ..\FatFs\ff.h
+..\output\spi.o: ..\FatFs\ffoperate.h

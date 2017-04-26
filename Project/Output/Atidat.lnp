@@ -31,11 +31,11 @@
 "..\output\spi.o"
 "..\output\ads.o"
 "..\output\app_ads.o"
+"..\output\sdcard.o"
 "..\output\public.o"
 "..\output\diskio.o"
 "..\output\ff.o"
 "..\output\ffoperate.o"
-"..\output\sdcard.o"
 --library_type=microlib --strict --scatter "..\Output\Atidat.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

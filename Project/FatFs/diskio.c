@@ -18,9 +18,9 @@ DSTATUS disk_initialize (BYTE drv)   /* Physical drive nmuber (0..) */
 								else
 								{ 
 										/*fix spi bug*/
-										SPIx_SetSpeed(SPI1,SPI_LOW_SPEED);
-										SPIx_WriteReadByte(SPI1,0xFF);
-										SPIx_SetSpeed(SPI1,SPI_HIGH_SPEED);
+										SPIx_SetSpeed(SPI3,SPI_LOW_SPEED);
+										SPIx_WriteReadByte(SPI3,0xFF);
+										SPIx_SetSpeed(SPI3,SPI_HIGH_SPEED);
 										return STA_NOINIT;
 								}                
 						default:

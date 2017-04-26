@@ -10,4 +10,5 @@
 #include "diskio.h"
 #include "ffconf.h"
 #include "ff.h"
+#include "ffoperate.h"
 #include "integer.h"

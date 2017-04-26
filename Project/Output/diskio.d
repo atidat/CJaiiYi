@@ -41,3 +41,4 @@
 ..\output\diskio.o: ..\FatFs\integer.h
 ..\output\diskio.o: ..\FatFs\ffconf.h
 ..\output\diskio.o: ..\FatFs\ff.h
+..\output\diskio.o: ..\FatFs\ffoperate.h

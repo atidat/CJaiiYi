@@ -8,10 +8,6 @@
 
 void DeviceInit(void)
 {
-		/*If use SW mode ,close JTAG debug tool*/
-		//RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
-		//RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
-		//GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);
 	
 		//NVIC_Configuration();
 	
@@ -25,8 +21,8 @@ void DeviceInit(void)
 		
 		ADS1256_Init();
 			
-		/*sdcard must be configed succesee*/
-		//while(SDCardInitialize());
+		/*sdcard must be configed success*/
+		////while(SDCardInitialize());
 		//sdInitStatus = SDCardInitialize();
 			
 }
@@ -35,8 +31,8 @@ void DeviceInit(void)
 int main()
 {
    	DeviceInit();
-		//UARTInit();
-		//ADS1256_readStatus(&adcStatus);
+
+		ADS1256_readStatus(&adcStatus);
 
 	while(1){
 		

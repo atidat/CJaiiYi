@@ -994,7 +994,7 @@ I (D:\CPT\Product\software\Project\FatFs\ffconf.h)(0x55988C74)
 I (D:\CPT\Product\software\Project\FatFs\ff.h)(0x4E646136)
 F (..\public\public.c)(0x5900369C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\public.o --omf_browse ..\output\public.crf --depend ..\output\public.d)
 I (D:\CPT\Product\software\Project\public\public.h)(0x58F47B58)
-F (..\FatFs\diskio.c)(0x59003786)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\diskio.o --omf_browse ..\output\diskio.crf --depend ..\output\diskio.d)
+F (..\FatFs\diskio.c)(0x59003F55)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\CMSIS -I..\..\FWLIB\inc -I..\Ads1256 -I..\main -I..\..\STARTUP -I..\public -I..\FatFs -I..\SD-I E:\ARM\RV31\INC-I E:\ARM\CMSIS\Include-I E:\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ..\output\diskio.o --omf_browse ..\output\diskio.crf --depend ..\output\diskio.d)
 I (D:\CPT\Product\software\Project\public\headers.h)(0x590039FB)
 I (D:\CPT\Product\software\CMSIS\stm32f10x.h)(0x4F95194A)
 I (D:\CPT\Product\software\CMSIS\core_cm3.h)(0x4D523B58)
