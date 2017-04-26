@@ -23,7 +23,7 @@ void DeviceInit(void)
 			
 		/*sdcard must be configed success*/
 		////while(SDCardInitialize());
-		//sdInitStatus = SDCardInitialize();
+		sdInitStatus = SDCardInitialize();
 			
 }
 
@@ -37,9 +37,8 @@ int main()
 	while(1){
 		
 #ifdef DebugUsart1
-															printf("rock&roll\n");
-		//USART_SendData(USART2, 0Xf00f);
-		DelayNumMs(1000);
+			printf("rock&roll\n");
+			DelayNumMs(1000);
 #endif		
 
 #ifdef DebugBias
@@ -47,7 +46,7 @@ int main()
 #endif
 
 #ifdef DebugFactor
-	  DebugGetAmpFactor();
+	 	DebugGetAmpFactor();
 #endif
 
 
@@ -63,6 +62,6 @@ int main()
 	}
 
 	return 0;	
-	//SPI_Initialize();
+
 
 }
