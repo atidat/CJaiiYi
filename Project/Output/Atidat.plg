@@ -1,0 +1,261 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\CPT\Product\software\Project\main\Atidat.uvproj
+Project File Date:  04/18/2017
+
+<h2>Output:</h2>
+compiling main.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #111-D: statement is unreachable
+main.c(72): warning:  #1-D: last line of file ends without a newline
+"main.c" - 0 Errors, 8 Warning(s).
+Build target 'Atidat'
+compiling stm32f10x_it.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+compiling usart.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+usart.c(46): warning:  #1-D: last line of file ends without a newline
+compiling spi.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+compiling ads.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.c(262): warning:  #1-D: last line of file ends without a newline
+compiling app_ads.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.c(60): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(61): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(64): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(65): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(68): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(69): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(72): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(73): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(76): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(77): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(138): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(142): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(143): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(146): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(150): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(151): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(154): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(155): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(162): warning:  #223-D: function "ADS1256_ReadOneChannelValue" declared implicitly
+..\Ads1256\app_ads.c(223): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(224): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(225): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+..\Ads1256\app_ads.c(228): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(229): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(230): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(230): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(233): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(234): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(235): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(235): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(238): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(239): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(240): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(240): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(243): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(244): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(245): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(245): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(185): warning:  #177-D: variable "SF_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(185): warning:  #177-D: variable "PP_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(186): warning:  #177-D: variable "AX_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(186): warning:  #177-D: variable "AY_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(187): warning:  #177-D: variable "CR_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(256): warning:  #1-D: last line of file ends without a newline
+compiling public.c...
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\public.c(71): warning:  #1-D: last line of file ends without a newline
+compiling diskio.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\FatFs\diskio.c(13): warning:  #223-D: function "SDCardInitialize" declared implicitly
+..\FatFs\diskio.c(43): warning:  #223-D: function "SDReadNumBlock" declared implicitly
+..\FatFs\diskio.c(70): warning:  #223-D: function "SDWriteNumBlock" declared implicitly
+compiling ff.c...
+compiling ffoperate.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\FatFs\ffoperate.c(54): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+..\FatFs\ffoperate.c(95): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\FatFs\ffoperate.c(96): warning:  #223-D: function "UartSendString" declared implicitly
+..\FatFs\ffoperate.c(96): error:  #20: identifier "COM2" is undefined
+..\FatFs\ffoperate.c(123): warning:  #940-D: missing return statement at end of non-void function "sdReadDataFromFile"
+..\FatFs\ffoperate.c(176): error:  #20: identifier "FILE_NAME_STRUCT" is undefined
+..\FatFs\ffoperate.c(183): warning:  #177-D: variable "fileLen" was declared but never referenced
+"..\Output\Atidat.axf" - 2 Errors, 100 Warning(s).
+Target not created
+compiling sdcard.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\SD\sdcard.c(125): warning:  #223-D: function "SPIx_Initialize" declared implicitly
+..\SD\sdcard.c(329): warning:  #550-D: variable "result" was set but never used
+..\SD\sdcard.c(391): warning:  #177-D: variable "retry" was declared but never referenced
+..\SD\sdcard.c(534): warning:  #177-D: variable "i" was declared but never referenced
+"..\SD\sdcard.c" - 0 Errors, 10 Warning(s).
+Build target 'Atidat'
+compiling main.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #111-D: statement is unreachable
+main.c(72): warning:  #1-D: last line of file ends without a newline
+compiling stm32f10x_it.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+compiling usart.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+usart.c(46): warning:  #1-D: last line of file ends without a newline
+compiling spi.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+compiling ads.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.c(262): warning:  #1-D: last line of file ends without a newline
+compiling app_ads.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.c(60): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(61): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(64): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(65): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(68): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(69): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(72): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(73): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(76): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(77): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(138): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(139): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(142): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(143): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(146): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(150): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(151): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(154): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(155): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(162): warning:  #223-D: function "ADS1256_ReadOneChannelValue" declared implicitly
+..\Ads1256\app_ads.c(223): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(224): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(225): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+..\Ads1256\app_ads.c(228): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(229): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(230): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(230): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(233): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(234): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(235): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(235): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(238): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(239): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(240): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(240): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(243): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(244): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(245): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\Ads1256\app_ads.c(245): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+..\Ads1256\app_ads.c(185): warning:  #177-D: variable "SF_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(185): warning:  #177-D: variable "PP_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(186): warning:  #177-D: variable "AX_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(186): warning:  #177-D: variable "AY_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(187): warning:  #177-D: variable "CR_ActualValue" was declared but never referenced
+..\Ads1256\app_ads.c(256): warning:  #1-D: last line of file ends without a newline
+compiling diskio.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+compiling ffoperate.c...
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h(13): warning:  #1-D: last line of file ends without a newline
+..\FatFs\ffoperate.c(54): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+..\FatFs\ffoperate.c(95): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+..\FatFs\ffoperate.c(96): warning:  #223-D: function "UartSendString" declared implicitly
+..\FatFs\ffoperate.c(96): error:  #20: identifier "COM2" is undefined
+..\FatFs\ffoperate.c(123): warning:  #940-D: missing return statement at end of non-void function "sdReadDataFromFile"
+..\FatFs\ffoperate.c(176): error:  #20: identifier "FILE_NAME_STRUCT" is undefined
+..\FatFs\ffoperate.c(183): warning:  #177-D: variable "fileLen" was declared but never referenced
+"..\Output\Atidat.axf" - 2 Errors, 103 Warning(s).
+Target not created
