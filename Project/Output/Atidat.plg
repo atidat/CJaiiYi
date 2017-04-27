@@ -3,7 +3,353 @@
 <pre>
 <h1>礦ision Build Log</h1>
 <h2>Project:</h2>
-D:\CPT\Product\software\Project\main\Atidat.uvproj
+F:\项目\20米CPT探头采集仪程序\CJaiiYi\Project\main\Atidat.uvproj
 Project File Date:  04/26/2017
 
 <h2>Output:</h2>
+compiling sdcard.c...
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 312 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef signed long  s32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                        ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 316 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef signed long  const sc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                              ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 320 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile signed long  vs32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 324 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile signed long  const vsc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                       ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 328 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef unsigned long  u32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                          ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 332 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef unsigned long  const uc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 336 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile unsigned long  vu32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                   ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 340 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile unsigned long  const vuc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                         ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #101: "FALSE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {FALSE = 0, TRUE = !FALSE} bool;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #101: "TRUE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {FALSE = 0, TRUE = !FALSE} bool;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                            ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #256: invalid redeclaration of type name "bool" (declared at line 345 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {FALSE = 0, TRUE = !FALSE} bool;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                           ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                            ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 348 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                          ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 348 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                                      ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                              ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 350 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                            ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 353 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                              ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 85 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_conf.h:   #define HSE_Value    ((u32)8000000) /* Value of the External oscillator in Hz*/
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_conf.h:           ^
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\main\usart.h:   #endif 
+..\main\usart.h:          ^
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h:   #endif
+..\Ads1256\ads.h:         ^
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h:   #endif
+..\Ads1256\app_ads.h:         ^
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h:   #endif
+..\main\spi.h:         ^
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\public.h:   #endif
+..\public\public.h:         ^
+..\public\headers.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h:   #include "integer.h"
+..\public\headers.h:                       ^
+..\SD\sdcard.c(63): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(63): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(75): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(131): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(131): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(170): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(228): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(266): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(286): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(286): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(296): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                 UnselectCard();
+..\SD\sdcard.c:                                 ^
+..\SD\sdcard.c(312): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(371): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(371): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(329): warning:  #550-D: variable "result" was set but never used
+..\SD\sdcard.c:         unsigned char result;
+..\SD\sdcard.c:                       ^
+..\SD\sdcard.c(401): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(401): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(431): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                 UnselectCard();
+..\SD\sdcard.c:                                                 ^
+..\SD\sdcard.c(457): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                 UnselectCard();
+..\SD\sdcard.c:                                                 ^
+..\SD\sdcard.c(489): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                                                 UnselectCard();
+..\SD\sdcard.c:                                                                                 ^
+..\SD\sdcard.c(496): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                                                         UnselectCard();
+..\SD\sdcard.c:                                                                                         ^
+..\SD\sdcard.c(512): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                         UnselectCard();
+..\SD\sdcard.c:                                         ^
+..\SD\sdcard.c(517): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(391): warning:  #177-D: variable "retry" was declared but never referenced
+..\SD\sdcard.c:         unsigned int retry;
+..\SD\sdcard.c:                      ^
+..\SD\sdcard.c(541): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                 UnselectCard();
+..\SD\sdcard.c:                 ^
+..\SD\sdcard.c(541): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:                 UnselectCard();
+..\SD\sdcard.c:                 ^
+..\SD\sdcard.c(534): warning:  #177-D: variable "i" was declared but never referenced
+..\SD\sdcard.c:                 unsigned char i;
+..\SD\sdcard.c:                               ^
+..\SD\sdcard.c: ..\SD\sdcard.c: 28 warnings, 27 errors
+..\SD\sdcard.c - 27 Error(s), 28 Warning(s).
+Build target 'Atidat'
+assembling startup_stm32f10x_hd.s...
+startup_stm32f10x_hd.s: error: A1023E: File "..\..\STARTUP\startup_stm32f10x_hd.s" could not be opened: No such file or directory
+startup_stm32f10x_hd.s: 1 Error, 0 Warnings
+Target not created
+compiling sdcard.c...
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(23): error:  #256: invalid redeclaration of type name "s32" (declared at line 312 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef signed long  s32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                        ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(27): error:  #256: invalid redeclaration of type name "sc32" (declared at line 316 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef signed long  const sc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                              ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(31): error:  #256: invalid redeclaration of type name "vs32" (declared at line 320 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile signed long  vs32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(35): error:  #256: invalid redeclaration of type name "vsc32" (declared at line 324 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile signed long  const vsc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                       ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(39): error:  #256: invalid redeclaration of type name "u32" (declared at line 328 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef unsigned long  u32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                          ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(43): error:  #256: invalid redeclaration of type name "uc32" (declared at line 332 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef unsigned long  const uc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(47): error:  #256: invalid redeclaration of type name "vu32" (declared at line 336 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile unsigned long  vu32;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                   ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(51): error:  #256: invalid redeclaration of type name "vuc32" (declared at line 340 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef volatile unsigned long  const vuc32;  /* Read Only */
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                         ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #101: "FALSE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {FALSE = 0, TRUE = !FALSE} bool;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #101: "TRUE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {FALSE = 0, TRUE = !FALSE} bool;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                            ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #256: invalid redeclaration of type name "bool" (declared at line 345 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {FALSE = 0, TRUE = !FALSE} bool;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                           ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "RESET" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #101: "SET" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                            ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "FlagStatus" (declared at line 348 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                          ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(57): error:  #256: invalid redeclaration of type name "ITStatus" (declared at line 348 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                                      ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "DISABLE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #101: "ENABLE" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                              ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(59): error:  #256: invalid redeclaration of type name "FunctionalState" (declared at line 350 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "ERROR" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                 ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #101: "SUCCESS" has already been declared in the current scope
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                            ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h(62): error:  #256: invalid redeclaration of type name "ErrorStatus" (declared at line 353 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:   typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrorStatus;
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_type.h:                                              ^
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_conf.h(147): warning:  #47-D: incompatible redefinition of macro "HSE_Value" (declared at line 85 of "D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x.h")
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_conf.h:   #define HSE_Value    ((u32)8000000) /* Value of the External oscillator in Hz*/
+D:\keil4\ARM\INC\ST\STM32F10x\stm32f10x_conf.h:           ^
+..\main\usart.h(9): warning:  #1-D: last line of file ends without a newline
+..\main\usart.h:   #endif 
+..\main\usart.h:          ^
+..\Ads1256\ads.h(104): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\ads.h:   #endif
+..\Ads1256\ads.h:         ^
+..\Ads1256\app_ads.h(14): warning:  #1-D: last line of file ends without a newline
+..\Ads1256\app_ads.h:   #endif
+..\Ads1256\app_ads.h:         ^
+..\main\spi.h(14): warning:  #1-D: last line of file ends without a newline
+..\main\spi.h:   #endif
+..\main\spi.h:         ^
+..\public\public.h(12): warning:  #1-D: last line of file ends without a newline
+..\public\public.h:   #endif
+..\public\public.h:         ^
+..\public\headers.h(14): warning:  #1-D: last line of file ends without a newline
+..\public\headers.h:   #include "integer.h"
+..\public\headers.h:                       ^
+..\SD\sdcard.c(63): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(63): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(75): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(131): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(131): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(170): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(228): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(266): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(286): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(286): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(296): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                 UnselectCard();
+..\SD\sdcard.c:                                 ^
+..\SD\sdcard.c(312): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(371): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(371): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         UnselectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(329): warning:  #550-D: variable "result" was set but never used
+..\SD\sdcard.c:         unsigned char result;
+..\SD\sdcard.c:                       ^
+..\SD\sdcard.c(401): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(401): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:         SelectCard();
+..\SD\sdcard.c:         ^
+..\SD\sdcard.c(431): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                 UnselectCard();
+..\SD\sdcard.c:                                                 ^
+..\SD\sdcard.c(457): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                 UnselectCard();
+..\SD\sdcard.c:                                                 ^
+..\SD\sdcard.c(489): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                                                 UnselectCard();
+..\SD\sdcard.c:                                                                                 ^
+..\SD\sdcard.c(496): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                                                                         UnselectCard();
+..\SD\sdcard.c:                                                                                         ^
+..\SD\sdcard.c(512): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                                         UnselectCard();
+..\SD\sdcard.c:                                         ^
+..\SD\sdcard.c(517): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                         UnselectCard();
+..\SD\sdcard.c:                         ^
+..\SD\sdcard.c(391): warning:  #177-D: variable "retry" was declared but never referenced
+..\SD\sdcard.c:         unsigned int retry;
+..\SD\sdcard.c:                      ^
+..\SD\sdcard.c(541): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+..\SD\sdcard.c:                 UnselectCard();
+..\SD\sdcard.c:                 ^
+..\SD\sdcard.c(541): error:  #20: identifier "GPIO_Pin_15" is undefined
+..\SD\sdcard.c:                 UnselectCard();
+..\SD\sdcard.c:                 ^
+..\SD\sdcard.c(534): warning:  #177-D: variable "i" was declared but never referenced
+..\SD\sdcard.c:                 unsigned char i;
+..\SD\sdcard.c:                               ^
+..\SD\sdcard.c: ..\SD\sdcard.c: 28 warnings, 27 errors
+..\SD\sdcard.c - 27 Error(s), 28 Warning(s).
+Build target 'Atidat'
+assembling startup_stm32f10x_hd.s...
+startup_stm32f10x_hd.s: error: A1023E: File "..\..\STARTUP\startup_stm32f10x_hd.s" could not be opened: No such file or directory
+startup_stm32f10x_hd.s: 1 Error, 0 Warnings
+Target not created
