@@ -62,7 +62,6 @@ int main()
 
 	}
 
-	return 0;	
-	//SPI_Initialize();
+	return 1;	
 
 }

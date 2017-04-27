@@ -66,10 +66,10 @@ unsigned char SDSendCommand(unsigned char cmd,			//E :WHTA DOES MEAN RELEASE / B
 
 /*---------------------------------------------------------------------------------------------
 Command Format
-	Bit position	47 						46  					[45:40]						[39:8] 		[7:1] 		0 
-	Width (bits)	1 						1  							6								32					7 			1 
-	Value 	      0     				1								x								x						x		  	1
-Description:(start bit)(transmission bit) (command index) 	(argument)	( CRC7) (end bit)
+	Bit position	47 						46  					[45:40]				[39:8] 		[7:1] 	0 
+	Width (bits)	1 						1  							6							32				7 		1 
+	Value 	      0     				1								x							x					x		  1
+Description:(start bit)(transmission bit)(command index)(argument)(CRC7)(end bit)
 ---------------------------------------------------------------------------------------------*/
 
 	SelectCard();
@@ -91,7 +91,7 @@ Description:(start bit)(transmission bit) (command index) 	(argument)	( CRC7) (e
 	do
 	{
 			res = SPIx_WriteReadByte(SPI3,0xFF);
-	}while((res&0x80)&&(retry--));
+	}while((res&0x80)&&(retry--));			 
 	
 // 	while((res=SPIx_WriteReadByte(SPI1,0xFF)) == 0xFF)
 // 		{
@@ -118,157 +118,159 @@ Description	:
 unsigned char sdInitStatus;
 unsigned char SDCardInitialize(void)
 {
-	unsigned  int i,retry;
-	unsigned char res;
-	unsigned char buffer[4];
+			unsigned  int i,retry;
+			unsigned char res;
+			unsigned char buffer[4];
 
-	SPI_Initialize(SPI3);
+			SPI_Initialize(SPI3);
 
-	SDCardType = SDCARD_TYPE_ERR ;
+			SDCardType = SDCARD_TYPE_ERR ;
 
-	SPIx_SetSpeed(SPI3,SPI_LOW_SPEED);
-	
-	SelectCard();
-	
-	for(i=0;i<20;i++) /*--Wait for SD inner finish initilized--*/
-	{
-			SPIx_WriteReadByte(SPI3,0xFF);
-	}
-
-	retry = 0;
-	do
-	{
-		/* In case of SPI host, CMD0 shall be the first command to send the card to SPI mode.*/
-			res = SDSendCommand(CMD0,0,0x95,RELEASE);			//E:RESET SD CARD
-			retry++;
-			if(retry>=200)
-			{
-					return  SDOtherErr;
-			}
-	}while(res!=0x01);	/*CMD0 command's response is R1*/				//E:HOW DID HE KNOW THE RESPONSE IS R1??????
-
-	/*--There is some questions at here--*/
-	//SelectCard(); /*--(CMD0+CS) signal means that drive SD card convert to spi mode--*/
-	
-	/*CMD8 is called Send Interface Condition Command;
-		**1AA = 0(20bit:reserved bits) 0001(4 bits:VHS) 10101010(8 bits:check pattern) */
-	res = SDSendCommand(CMD8,0x1AA,0x87,NORELEASE);
-	/*The response length is 5 bytes. The structure of the first (MSB) byte is identical to response type R1.*/
-	/*In the argument, ‘voltage supplied’ is set to the host supply voltage and
-	check pattern’ is set to any 8-bit pattern,here is 10101010(recommended)*/
-
-	/*If the SD is V2.0 card,including standard or high capacity type*/
-	if(res == 0x01) //first (MSB) byte is type R1
-		{
-			/*The response for CMD8 is R7 format*/
-			buffer[0] = SPIx_WriteReadByte(SPI3,0xFF);//arg[24:31]:reserved bits,should be 00
-			buffer[1] = SPIx_WriteReadByte(SPI3,0xFF);//arg[16:23]:reserved bits,should be 00
-			buffer[2] = SPIx_WriteReadByte(SPI3,0xFF);//arg[8:15]:voltage accepted:should be 0x01,2.7~3.6
-			buffer[3] = SPIx_WriteReadByte(SPI3,0xFF);//arg[0:7]:check pattern :should be 0xAA,
-			/*The card that accepted the supplied voltage returns R7 response. 
-			**In the response, the card echoes back both the voltage range and check pattern set in the argument.*/
-			UnselectCard();
-			SPIx_WriteReadByte(SPI3,0xFF);
+			SPIx_SetSpeed(SPI3,SPI_LOW_SPEED);
 			
-			/*If the card supports voltage 2.7~ 3.3(V),then start sending initialize cmd*/
-			if((buffer[2]==0x01)&&(buffer[3]==0xAA))
-				{
-					retry = 0;
-					do
-					{
-						res = SDSendCommand(CMD55,0,0x01,RELEASE);
-						if(res!=0x01)
-							{
-								return  SDOtherErr;
-							}
-						/*start initialization and to check if the card has completed initialization*/
-						res = SDSendCommand(ACMD41,0x40000000,0x01,RELEASE);
-						/*the response ACMD41 is in R1 format*/ 
+			SelectCard();
+			
+			for(i=0;i<20;i++) /*--Wait for SD inner finish initilized--*/
+			{
+					SPIx_WriteReadByte(SPI3,0xFF);
+			}
 
-						retry++;
-						if(retry>=200)
-							{
-								return SDOtherErr;
-							}
-					}while(res!=0);//Setting bit:“in idle state” in the R1 to “0” indicates completion of initialization
-
-					/*send CMD58 to read OCR register*/
-					res = SDSendCommand(CMD58,0,0x01,NORELEASE);
-					/*caution:the response CMD58 is in R3 format*/  
-					if(res!=0x00)//“in idle state” in the R1 to “0” indicates completion of initialization
+			retry = 0;
+			do
+			{
+				/* In case of SPI host, CMD0 shall be the first command to send the card to SPI mode.*/
+					res = SDSendCommand(CMD0,0,0x95,RELEASE);			//E:RESET SD CARD
+					retry++;
+					if(retry>=200)
 					{
-							return SDOtherErr;
+							return  SDOtherErr;
 					}
-					/*R3 format including the content of OCR register*/
-					buffer[0] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0xC0 VER2:0x80 OCR[24:31]
-					buffer[1] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0xFF VER2:0xFF	OCR[16:23]
-					buffer[2] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0x80 VER2:0x80	OCR[8:15]
-					buffer[3] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0x00 VER2:0x00 OCR[0:7]
+			}while(res!=0x01);	/*CMD0 command's response is R1*/				
+										
+			
+			
+			/*--There is some questions at here--*/
+			//SelectCard(); /*--(CMD0+CS) signal means that drive SD card convert to spi mode--*/
+			
+			/*CMD8 is called Send Interface Status Command;
+				**1AA = 0(20bit:reserved bits) 0001(4 bits:VHS) 10101010(8 bits:check pattern) */
+			res = SDSendCommand(CMD8,0x1AA,0x87,NORELEASE);
+			/*The response length is 5 bytes. The structure of the first (MSB) byte is identical to response type R1.*/
+			/*In the argument, ‘voltage supplied’ is set to the host supply voltage and
+			check pattern’ is set to any 8-bit pattern,here is 10101010(recommended)*/
+
+			/*If the SD is V2.0 card,including standard or high capacity type*/
+			if(res == 0x01) //first (MSB) byte is type R1
+				{
+					/*The response for CMD8 is R7 format*/
+					buffer[0] = SPIx_WriteReadByte(SPI3,0xFF);//arg[24:31]:reserved bits,should be 00
+					buffer[1] = SPIx_WriteReadByte(SPI3,0xFF);//arg[16:23]:reserved bits,should be 00
+					buffer[2] = SPIx_WriteReadByte(SPI3,0xFF);//arg[8:15]:voltage accepted:should be 0x01,2.7~3.6
+					buffer[3] = SPIx_WriteReadByte(SPI3,0xFF);//arg[0:7]:check pattern :should be 0xAA,
+					/*The card that accepted the supplied voltage returns R7 response. 
+					**In the response, the card echoes back both the voltage range and check pattern set in the argument.*/
 					UnselectCard();
 					SPIx_WriteReadByte(SPI3,0xFF);
 					
-					/*Jundge the sd card has finished the power up routine*/
-					if(buffer[0]&0x80 != 0x80)
-						return SDOtherErr;
+					/*If the card supports voltage 2.7~ 3.3(V),then start sending initialize cmd*/
+					if((buffer[2]==0x01)&&(buffer[3]==0xAA))
+						{
+							retry = 0;
+							do
+							{
+								res = SDSendCommand(CMD55,0,0x01,RELEASE);
+								if(res!=0x01)
+									{
+										return  SDOtherErr;
+									}
+								/*start initialization and to check if the card has completed initialization*/
+								res = SDSendCommand(ACMD41,0x40000000,0x01,RELEASE);
+								/*the response ACMD41 is in R1 format*/ 
 
-					if(buffer[0]&0x40)  SDCardType = SDCARD_TYPE_VER2HC;    //检查CCS	 
-					else SDCardType = SDCARD_TYPE_VER2;	    
-			/*-----------鉴别SD2.0卡版本结束-----------*/ 
-		
-					SPIx_SetSpeed(SPI1,SPI_HIGH_SPEED);  
-					return  0;  //success
-				}
-			else return SDOtherErr;//The card don't support voltage and check pattern.
+								retry++;
+								if(retry>=200)
+									{
+										return SDOtherErr;
+									}
+							}while(res!=0);//Setting bit:“in idle state” in the R1 to “0” indicates completion of initialization
 
-		}
+							/*send CMD58 to read OCR register*/
+							res = SDSendCommand(CMD58,0,0x01,NORELEASE);
+							/*caution:the response CMD58 is in R3 format*/  
+							if(res!=0x00)//“in idle state” in the R1 to “0” indicates completion of initialization
+							{
+									return SDOtherErr;
+							}
+							/*R3 format including the content of OCR register*/
+							buffer[0] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0xC0 VER2:0x80 OCR[24:31]
+							buffer[1] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0xFF VER2:0xFF	OCR[16:23]
+							buffer[2] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0x80 VER2:0x80	OCR[8:15]
+							buffer[3] = SPIx_WriteReadByte(SPI3,0xFF);//VER2HC:0x00 VER2:0x00 OCR[0:7]
+							UnselectCard();
+							SPIx_WriteReadByte(SPI3,0xFF);
+							
+							/*Jundge the sd card has finished the power up routine*/
+							if(buffer[0]&0x80 != 0x80)
+								return SDOtherErr;
 
-	/*If the SD is V1.x card or not a sd card at all */
-	else if(res == 0x05)
-		{
-			UnselectCard();
-			SPIx_WriteReadByte(SPI3,0xFF);
-
-			SDCardType = SDCARD_TYPE_VER1;
+							if(buffer[0]&0x40)  SDCardType = SDCARD_TYPE_VER2HC;    //检查CCS	 
+							else SDCardType = SDCARD_TYPE_VER2;	    
+					/*-----------鉴别SD2.0卡版本结束-----------*/ 
 				
-			retry=0;
-			do 
-			{
-				res = SDSendCommand(CMD55,0,0x01,RELEASE);
-				if(res!=0x01)
-				{
-					return  SDOtherErr;
+							SPIx_SetSpeed(SPI1,SPI_HIGH_SPEED);  
+							return  0;  //success
+						}
+					else return SDOtherErr;//The card don't support voltage and check pattern.
+
 				}
-				res = SDSendCommand(ACMD41,0,0x01,RELEASE);
 
-				retry++;
-			}while(res!=0x00&&retry<400);
-
-			if(retry>=400)
+			/*If the SD is V1.x card or not a sd card at all */
+			else if(res == 0x05)
 				{
-					SDCardType = SDCARD_TYPE_MMC;
-					retry=0;
-					/*Initialize MMC card*/
-					do
-					{
-						res = SDSendCommand(CMD1,0x00,0x01,RELEASE);
-						retry++;
-					}while(res!=0x00&&retry<0xFFFE);
+					UnselectCard();
+					SPIx_WriteReadByte(SPI3,0xFF);
 
-					if(retry>=0xFFFE||SDSendCommand(CMD16,512,0x01,RELEASE)!=0)
+					SDCardType = SDCARD_TYPE_VER1;
+						
+					retry=0;
+					do 
+					{
+						res = SDSendCommand(CMD55,0,0x01,RELEASE);
+						if(res!=0x01)
+						{
+							return  SDOtherErr;
+						}
+						res = SDSendCommand(ACMD41,0,0x01,RELEASE);
+
+						retry++;
+					}while(res!=0x00&&retry<400);
+
+					if(retry>=400)
 						{
 							SDCardType = SDCARD_TYPE_MMC;
+							retry=0;
+							/*Initialize MMC card*/
+							do
+							{
+								res = SDSendCommand(CMD1,0x00,0x01,RELEASE);
+								retry++;
+							}while(res!=0x00&&retry<0xFFFE);
+
+							if(retry>=0xFFFE||SDSendCommand(CMD16,512,0x01,RELEASE)!=0)
+								{
+									SDCardType = SDCARD_TYPE_MMC;
+								}
+
 						}
 
-				}
+					
+					}
+			UnselectCard();
+			SPIx_SetSpeed(SPI3,SPI_HIGH_SPEED);
 
-			
-			}
-	UnselectCard();
-	SPIx_SetSpeed(SPI3,SPI_HIGH_SPEED);
-
-	if(SDCardType)return  0;
-	else if(res) return res;
-	else return SDOtherErr;
+			if(SDCardType)return  0;
+			else if(res) return res;
+			else return SDOtherErr;
 	
 }
 
@@ -285,7 +287,15 @@ unsigned char SDRecvDataFromCard(unsigned char *pdata,unsigned int len,unsigned 
 	
 	SelectCard();
 	
-	/*----Wait for start token from card----*/
+	
+//这里没有发送指令，直接读？？？？？
+//当读取1块数据时，就直接调用该函数。
+//下面可以看到，还是需要 CMD 17	指令的
+	
+	
+/** 一个完整的数据包包括 数据标识符、数据块内容、CRC校验值 **/	
+/** CRC校验值长度 16Bits **/		
+/*----Wait for start token from card----*/
 	retry=0;
 	do
 	{
@@ -304,7 +314,8 @@ unsigned char SDRecvDataFromCard(unsigned char *pdata,unsigned int len,unsigned 
 			pdata++;
 		}
 
-	SPIx_WriteReadByte(SPI3,0xFF);
+	
+	SPIx_WriteReadByte(SPI3,0xFF);//One dummy CRC
 	SPIx_WriteReadByte(SPI3,0xFF);//Two dummy CRC
 
 	if(free == RELEASE)
@@ -406,7 +417,8 @@ unsigned char SDWriteNumBlock( unsigned int sector,
 			res = SDSendCommand(CMD24,sector,0x01,NORELEASE);
 			if(res==0)
 				{
-			
+
+					//连续三条的意义是啥？
 					SPIx_WriteReadByte(SPI3, 0xFF);				
 					SPIx_WriteReadByte(SPI3, 0xFF);
 					SPIx_WriteReadByte(SPI3, 0xFF);	
@@ -447,7 +459,7 @@ unsigned char SDWriteNumBlock( unsigned int sector,
 						/*----Send erase block command---*/
 						/*-CMD 55 res in format R1,be 0x00,when debug,shoule checkk the res value*/	
 						res = SDSendCommand(CMD55,0,0x01,RELEASE);	
-						/*-CMD AMD23 res in format R1,be 0x00,when debug,shoule checkk the res value*/							
+						/*-CMD AMD23 res in format R1,be 0x00,when debug,shoule check the res value*/							
 						res = SDSendCommand(ACMD23,BlockNum,0x01,RELEASE);						
 					}
 				
@@ -528,26 +540,26 @@ warning	:the program is fault,we can not use it
 -----------------------------------------------------------*/
 unsigned char pDa[128];
 u8 SDGetRegisterCSD(unsigned char  *pdata)
-	{
-		unsigned char  res;	 
-		
-		unsigned char i;
-				
-		res=SDSendCommand(CMD9,0,0x01,NORELEASE);//发CMD9命令，读CSD
- 		if(res==0)
- 			{
-					res = SDRecvDataFromCard(pdata, 16, RELEASE);//接收16个字节的数据 
-			}
-		UnselectCard();
-		if(res)
-			{
-				return res;
-			}
-		else
-			{
-				return 0;
-			}
-	}  
+{
+			unsigned char  res;	 
+			
+			unsigned char i;
+					
+			res=SDSendCommand(CMD9,0,0x01,NORELEASE);//发CMD9命令，读CSD
+			if(res==0)
+				{
+						res = SDRecvDataFromCard(pdata, 16, RELEASE);//接收16个字节的数据 
+				}
+			UnselectCard();
+			if(res)
+				{
+					return res;
+				}
+			else
+				{
+					return 0;
+				}
+}  
 
 
 /*----------------------------------------------------------
@@ -556,56 +568,56 @@ Description	:Success,return capacity,else return 0
 warning	:the program is fault,we can not use it
 -----------------------------------------------------------*/
 unsigned int  SDGetMediaCapacity(void)
-	{
-	unsigned char  csd[16];
-	unsigned int Capacity;
-	unsigned char r1;
-	unsigned short i;
-	unsigned short temp;  	
-	
-	//取CSD信息，如果期间出错，返回0
-	if(SDGetRegisterCSD(csd)!=0) return 0;	    
-	//如果为SDHC卡，按照下面方式计算
-	if((csd[0]&0xC0)==0x40)
-		{									  
-		Capacity=((u32)csd[8])<<8;
-		Capacity+=(u32)csd[9]+1;	 
-		Capacity = (Capacity)*1024;//得到扇区数
-		Capacity *= 512;//得到字节数			   
-		}
-	else
-		{		    
-		i = csd[6]&0x03;
-		i<<=8;
-		i += csd[7];
-		i<<=2;
-		i += ((csd[8]&0xc0)>>6);
-		//C_SIZE_MULT
-		r1 = csd[9]&0x03;
-		r1<<=1;
-		r1 += ((csd[10]&0x80)>>7);	 
-		r1+=2;//BLOCKNR
-		temp = 1;
-		while(r1)
-			{
-			temp*=2;
-			r1--;
+{
+		unsigned char  csd[16];
+		unsigned int Capacity;
+		unsigned char r1;
+		unsigned short i;
+		unsigned short temp;  	
+
+		//取CSD信息，如果期间出错，返回0
+		if(SDGetRegisterCSD(csd)!=0) return 0;	    
+		//如果为SDHC卡，按照下面方式计算
+		if((csd[0]&0xC0)==0x40){	
+			
+					Capacity=((u32)csd[8])<<8;
+					Capacity+=(u32)csd[9]+1;	 
+					Capacity = (Capacity)*1024;//得到扇区数
+					Capacity *= 512;//得到字节数			   
 			}
-		Capacity = ((u32)(i+1))*((u32)temp);	 
-		// READ_BL_LEN
-		i = csd[5]&0x0f;
-		//BLOCK_LEN
-		temp = 1;
-		while(i)
-			{
-			temp*=2;
-			i--;
+		else{		
+			
+					i = csd[6]&0x03;
+					i<<=8;
+					i += csd[7];
+					i<<=2;
+					i += ((csd[8]&0xc0)>>6);
+					//C_SIZE_MULT
+					r1 = csd[9]&0x03;
+					r1<<=1;
+					r1 += ((csd[10]&0x80)>>7);	 
+					r1+=2;//BLOCKNR
+					temp = 1;
+					while(r1)
+						{
+						temp*=2;
+						r1--;
+						}
+					Capacity = ((u32)(i+1))*((u32)temp);	 
+					// READ_BL_LEN
+					i = csd[5]&0x0f;
+					//BLOCK_LEN
+					temp = 1;
+					while(i)
+						{
+						temp*=2;
+						i--;
+						}
+					//The final result
+					Capacity *= (u32)temp;//字节为单位 	  
 			}
-		//The final result
-		Capacity *= (u32)temp;//字节为单位 	  
-		}
-	return (u32)Capacity;
-	}	  
+		return (u32)Capacity;
+}	  
 	  																			    
 
 
